@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <Nullable>enable</Nullable>
+    <RepositoryUrl>https://github.com/npnelson/Messaging</RepositoryUrl>
+    <Description>Messaging Abstractions</Description>
+    <Authors>npnelson</Authors>
+    <PackageProjectUrl>https://github.com/npnelson/Messaging</PackageProjectUrl>
+  </PropertyGroup>
+
+</Project>

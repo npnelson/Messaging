@@ -15,7 +15,8 @@ namespace NetToolBox.Messaging.AzureServiceBus
             if (!_senderDictionary.ContainsKey((connectionString, entityPath)))
             {
                 var tokenProvider = TokenProvider.CreateManagedIdentityTokenProvider();
-                var queueClient = new QueueClient(connectionString, entityPath, tokenProvider);
+                var connStringBuilder = new ServiceBusConnectionStringBuilder(connectionString);
+                var queueClient = new QueueClient(connStringBuilder.Endpoint, entityPath, tokenProvider);
                 var messageSender = new AzureMessageSender(queueClient);
                 _senderDictionary.TryAdd((connectionString, entityPath), messageSender);
             }

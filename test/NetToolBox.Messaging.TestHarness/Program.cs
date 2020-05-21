@@ -11,7 +11,7 @@ namespace NetToolBox.Messaging.TestHarness
 
 
             var factory = new AzureMessagingFactory();
-            var sender = factory.GetSender("sb://test.servicebus.windows.net", "test");
+            var sender = factory.GetSender("Endpoint=sb://medonehp.servicebus.windows.net;Authentication=ManagedIdentity", "hl7messages-test");
             await sender.SendAsync("test message");
             Console.WriteLine("Message Sent");
             Console.ReadLine();
